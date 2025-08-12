@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+
+# macOS
+.DS_Store
+
+# Generated artifacts
+Logs/
+Workflows/
+
+# Editors
+.vscode/
+.idea/

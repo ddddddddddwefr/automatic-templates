@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": ["label", "confidence"],
+  "properties": {
+    "label": { "type": "string", "enum": ["billing","technical","account","abuse","feature_request"] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,41 @@
+meta:
+  name: support.ticket.classify
+  version: 1.0.0
+  owner: "<ORG>-AI"
+  tags: [classification, support]
+variables:
+  product: {type: string, required: true}
+  severity: {type: string, required: true, enum: ["low","medium","high"]}
+  ticket_text: {type: string, required: true, min_len: 20}
+system: |
+  You are a precise support classifier. Output JSON only, matching the schema.
+user: |
+  Classify the ticket for product "{{ product }}" severity "{{ severity }}".
+  Ticket:
+  """{{ ticket_text }}"""
+  Labels: ["billing","technical","account","abuse","feature_request"]
+constraints:
+  output_format: json
+  schema_path: "schema.json"
+  temperature: 0.1
+
+meta:
+  name: support.ticket.classify
+  version: 1.0.0
+  owner: "<ORG>-AI"
+  tags: [classification, support]
+variables:
+  product: {type: string, required: true}
+  severity: {type: string, required: true, enum: ["low","medium","high"]}
+  ticket_text: {type: string, required: true, min_len: 20}
+system: |
+  You are a precise support classifier. Output JSON only, matching the schema.
+user: |
+  Classify the ticket for product "{{ product }}" severity "{{ severity }}".
+  Ticket:
+  """{{ ticket_text }}"""
+  Labels: ["billing","technical","account","abuse","feature_request"]
+constraints:
+  output_format: json
+  schema_path: "schema.json"
+  temperature: 0.1
